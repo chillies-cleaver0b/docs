@@ -1,15 +1,15 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Zamzar Developer API",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/zamzar-logo.png",
+    "light": "/logo/zamzar-logo.png"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#0550B3",
+    "light": "#7AC3FA",
+    "dark": "#0345A0",
     "anchors": {
       "from": "#0D9373",
       "to": "#07C983"
@@ -18,12 +18,12 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "https://developers.zamzar.com/support"
     }
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://developers.zamzar.com/user/dashboard"
   },
   "tabs": [
     {
@@ -33,60 +33,96 @@
   ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "name": "Formats",
+      "icon": "files",
+      "url": "https://developers.zamzar.com/formats",
+      "color": "#0550B3"
     },
     {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "name": "Pricing",
+      "icon": "dollar-sign",
+      "url": "https://developers.zamzar.com/pricing",
+      "color": "#0550B3"
     },
     {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "name": "FAQ",
+      "icon": "question",
+      "url": "https://developers.zamzar.com/faq",
+      "color": "#0550B3"
     }
   ],
   "navigation": [
     {
       "group": "Get Started",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "docs/get-started/introduction",
+        "docs/get-started/obtain-an-api-key",
+        "docs/get-started/convert-a-file",
+        "docs/get-started/check-progress",
+        "docs/get-started/download-converted-file"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Guides",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "docs/guides/long-running-tasks",
+        "docs/guides/importing-files",
+        "docs/guides/exporting-files"
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Connected Services",
       "pages": [
-        "api-reference/introduction"
+        "docs/connected-services/overview",
+        "docs/connected-services/s3"
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "API Overview",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "api-reference/overview/introduction",
+        "api-reference/overview/authentication",
+        "api-reference/overview/requests",
+        "api-reference/overview/responses",
+        "api-reference/overview/pagination",
+        "api-reference/overview/errors",
+        "api-reference/overview/versioning"
+      ]
+    },
+    {
+      "group": "Go Live",
+      "pages": [
+        "api-reference/go-live/environments",
+        "api-reference/go-live/rate-limiting",
+        "api-reference/go-live/metering",
+        "api-reference/go-live/proxying"
+      ]
+    },
+    {
+      "group": "Conversion Endpoints",
+      "pages": [
+        "api-reference/endpoints/conversion/create",
+        "api-reference/endpoints/conversion/get",
+        "api-reference/endpoints/conversion/index",
+        "api-reference/endpoints/conversion/delete"
+      ]
+    },
+    {
+      "group": "File Endpoints",
+      "pages": [
+        "api-reference/endpoints/file/create",
+        "api-reference/endpoints/file/get",
+        "api-reference/endpoints/file/download",
+        "api-reference/endpoints/file/index",
+        "api-reference/endpoints/file/delete"
       ]
     }
   ],
   "openapi": ["/api-reference/zamzarapi.yaml"],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "facebook": "https://www.facebook.com/zamzar",
+    "twitter": "https://twitter.com/zamzar",
+    "instagram": "https://www.instagram.com/zamzar",
+    "github": "https://github.com/zamzar"
   }
 }

@@ -1,0 +1,14 @@
+---
+title: 'Proxying'
+description: 'Use a proxy server to keep your API keys private'
+---
+
+If you are developing a mobile or desktop application that requires access to the Zamzar API, under no circumstances
+should you include your Zamzar API keys in your application's binary, as this is a security risk. A malicious user
+could reverse engineer your API keys from the application binary; or by monitoring the network access between your
+application and our servers.
+
+Instead, we recommend that your application route requests to our API via a proxy server that you control.
+Your proxy server should authenticate your users, sign the requests to our API with one of your API keys, and forward
+the request to the Zamzar API. In addition to keeping your API keys private, using a proxy server also allows you to
+change your API keys without needing to distribute a new version of your application to your users.
