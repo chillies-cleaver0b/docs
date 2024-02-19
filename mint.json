@@ -83,6 +83,7 @@
       ]
     }
   ],
+  "openapi": ["/api-reference/zamzarapi.yaml"],
   "footerSocials": {
     "twitter": "https://twitter.com/mintlify",
     "github": "https://github.com/mintlify",
