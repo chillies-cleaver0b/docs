@@ -505,6 +505,44 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Jobs'
+      x-codeSamples:
+        - lang: java
+          label: List all jobs
+          source: |
+            import com.zamzar.api.*;
+            import com.zamzar.api.auth.*;
+            import com.zamzar.api.model.*;
+            import com.zamzar.api.core.JobsApi;
+            
+            public class ListJobsExample {
+            
+                public static void main(String[] args) {
+                    ApiClient defaultClient = Configuration.getDefaultApiClient();
+                    defaultClient.setBasePath("https://api.zamzar.com/v1");
+                    
+                    // Configure HTTP bearer authorization: ApiKeyAuth
+                    HttpBearerAuth ApiKeyAuth = (HttpBearerAuth) defaultClient.getAuthentication("ApiKeyAuth");
+                    ApiKeyAuth.setBearerToken("BEARER TOKEN");
+            
+                    JobsApi apiInstance = new JobsApi(defaultClient);
+                    Integer limit = 25; // Integer | Limit the number of results (max 50)
+                    Integer after = 42; // Integer | Retrieve jobs after the specified jobId
+                    try {
+                        Jobs result = apiInstance.listJobs(limit, after);
+                        System.out.println(result);
+                    } catch (ApiException e) {
+                        System.err.println("Exception when calling JobsApi#listJobs");
+                        System.err.println("Status code: " + e.getCode());
+                        System.err.println("Reason: " + e.getResponseBody());
+                        System.err.println("Response headers: " + e.getResponseHeaders());
+                        e.printStackTrace();
+                    }
+                }
+            }
+        - lang: javascript
+          label: Another example
+          source: |
+            // FIXME: add example
     post:
       description: |-
         Submit a conversion job for a local file, an uploaded file, a remote URL or S3 bucket.
@@ -1073,6 +1111,6 @@ components:
   securitySchemes:
     ApiKeyAuth:
       type: http
-      scheme: basic
+      scheme: bearer
 security:
   - ApiKeyAuth: []

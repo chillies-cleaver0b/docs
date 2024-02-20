@@ -1,0 +1,14 @@
+/* Allow the page to be wider */
+.max-w-8xl {
+    max-width: 110rem;
+}
+
+/* Allow the code samples in the sidebar to be wider */
+/* See: https://tailwindcss.com/docs/responsive-design */
+@media (min-width: 1536px) {
+    #content-side-layout {
+        .w-\[28rem\] {
+            width: 42rem;
+        }
+    }
+}
